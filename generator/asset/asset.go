@@ -3,7 +3,6 @@ package asset
 import "time"
 
 type (
-
 	AssetVersion struct {
 		Attributes map[string][]string
 		Content    interface{}

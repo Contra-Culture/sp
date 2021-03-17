@@ -1,5 +1,7 @@
 package generator
 
+import "github.com/Contra-Culture/sp/generator/asset"
+
 type (
 	Universe struct {
 		rootPath  string
@@ -10,6 +12,6 @@ type (
 	}
 )
 
-func (u *Universe) Update(asset *Asset) {
+func (u *Universe) Update(asset *asset.Asset) {
 
 }
