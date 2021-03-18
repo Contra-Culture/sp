@@ -17,4 +17,5 @@ type (
 		Attributes []string
 		Versions   map[string]AssetVersion
 	}
+	AssetTypes []AssetType
 )

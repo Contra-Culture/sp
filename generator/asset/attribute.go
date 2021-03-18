@@ -4,12 +4,13 @@ type (
 	AttributeName string
 	AttributeType struct {
 		Name     AttributeName
-		Children map[string]AttributeType
+		Children map[AttributeName]AttributeType
 	}
-	AssetAttributeTypesSet map[AttributeName]AttributeType
-	AssetAttribute         struct {
+	AssetAttributeTypes map[AttributeName]AttributeType
+	AssetAttribute      struct {
 		Type     *AttributeType
 		Value    string
-		Children map[string]AssetAttribute
+		Children map[AttributeName]AssetAttribute
 	}
+	AssetAttributes map[AttributeName]AssetAttribute
 )

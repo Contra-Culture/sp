@@ -26,13 +26,13 @@ const (
 	DontLoad = loadOption(false)
 )
 
-func New(root string, doLoad loadOption) (linker *Linker, err error) {
+func NewLinker(root string, doLoad loadOption) (linker *Linker, err error) {
 	linker.rootDir = root
 	if doLoad {
-		linker.links, err = linker.load(root)
-	} else {
-		linker.links = make(Links)
+		err = linker.load(root)
+		return
 	}
+	linker.links = make(Links)
 	return
 }
 func (l *Linker) Get(path []string) (link Link) {
@@ -44,6 +44,6 @@ func (l *Linker) Make(path []string, name string) (err error) {
 func (l *Linker) Save() (err error) {
 	return
 }
-func (l *Linker) load(filePath string) (links Links, err error) {
+func (l *Linker) load(filePath string) (err error) {
 	return
 }
